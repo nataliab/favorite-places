@@ -2,7 +2,7 @@ import com.typesafe.sbt.packager.Keys._
 
 enablePlugins(PlayScala)
 
-name := "hello-world"
+name := "favorite-places"
 dockerRepository := Some("giltouroboros")
 maintainer := "Ouroboros <ouroboros@gilt.com>"
 dockerBaseImage := "fiadliel/java8-jre:8u60"

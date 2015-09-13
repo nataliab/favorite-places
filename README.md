@@ -1,4 +1,4 @@
-# hello-world
+# favorite-places
 
 Scala, Play Framework, Docker 
 
@@ -14,7 +14,7 @@ sbt run
 - Check build.sbt:
 
 ```bash
-name := "hello-world"
+name := "favorite-places"
 
 dockerRepository := Some("giltouroboros") // replace with your Docker repository name
 

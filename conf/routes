@@ -5,3 +5,4 @@
 GET     /places     controllers.Places.get()
 PUT     /places     controllers.Places.put()
 
+

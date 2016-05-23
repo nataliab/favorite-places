@@ -1,0 +1,75 @@
+{
+  "apidoc": {
+    "version": "0.11.21"
+  },
+  "name": "favorite-places",
+  "base_url": "http://gilt.com/favorite-places",
+  "description": "Favorite places",
+  "info": {
+    "contact": {
+      "name": "Natalia",
+      "email": "nbartol@gilt.com"
+    }
+  },
+  "enums": {
+  },
+  "models": {
+    "place": {
+      "description": "Describes a place",
+      "fields": [
+        {
+          "name": "id",
+          "type": "string",
+          "description": "Place id",
+          "required": true,
+          "example": "50d50d91e4b0ca3030e50312"
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "description": "Place name",
+          "required": true,
+          "example": "The Beerhouse"
+        },
+        {
+          "name": "imageUrl",
+          "type": "string",
+          "description": "Url of place photo",
+          "required": true,
+          "example": "https://irs2.4sqi.net/img/general/640/5293444_GBJkT8dTt_lCCu2qbwK5vm6uX64LWoDUzvMh6tG3kxY"
+        }
+      ]
+    }
+  },
+  "resources": {
+    "place": {
+      "path": "/places",
+      "operations": [
+        {
+          "method": "GET",
+          "path": "/",
+          "description": "Fetches all favorited places",
+          "responses": {
+            "200": {
+              "type": "[place]",
+              "description": "List of places"
+            }
+          }
+        },
+        {
+          "method": "PUT",
+          "path": "/",
+          "description": "Adds place to favorited places",
+          "body": {
+            "type": "place"
+          },
+          "responses": {
+            "201": {
+              "type": "unit"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

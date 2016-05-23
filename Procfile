@@ -1,0 +1,1 @@
+web: target/universal/stage/bin/favorite-places -Dhttp.port=${PORT}
